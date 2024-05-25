@@ -1,0 +1,64 @@
+Time Complexity:
+ Linked Lists:
+    Insertion at Index: O(n)
+    Deletion at Index: O(n)
+    Accessing Element at Index: O(n)
+    Appending: O(1) (if tail pointer is maintained, otherwise O(n))
+    Prepending: O(1)
+    Search: O(n)
+    Reversal: O(n)
+    Rotation: O(n)
+ Dynamic Arrays:
+    Insertion at Index: O(n) (if resizing is required, otherwise O(1) average)
+    Deletion at Index: O(n) (if resizing is required, otherwise O(1) average)
+    Accessing Element at Index: O(1)
+    Appending: O(1) amortized (resizing operation may take O(n) occasionally)
+    Prepending: O(n) (as it requires shifting elements)
+    Search: O(n)
+    Reversal: O(n)
+    Rotation: O(n)
+Space Complexity:
+ Linked Lists:
+    Insertion at Index: O(1)
+    Deletion at Index: O(1)
+    Accessing Element at Index: O(1)
+    Appending: O(1)
+    Prepending: O(1)
+    Search: O(1)
+    Reversal: O(1)
+    Rotation: O(1)
+ Dynamic Arrays:
+    Insertion at Index: O(n) (if resizing is required)
+    Deletion at Index: O(n) (if resizing is required)
+    Accessing Element at Index: O(1)
+    Appending: O(1) amortized (resizing operation may take O(n) occasionally)
+    Prepending: O(n)
+    Search: O(1)
+    Reversal: O(1)
+    Rotation: O(n) (for rotating by k positions)
+
+
+Advantages and Disadvantages:
+ Linked Lists:
+    Advantages:
+        Efficient for frequent insertions and deletions at any position (with pointers).
+        No need to pre-allocate memory, making them more flexible.
+        No wasted memory due to dynamic resizing.
+    Disadvantages:
+        Slow access time for random elements due to sequential traversal.
+        Extra memory overhead for storing pointers.
+        Inefficient memory usage due to fragmentation.
+
+ Dynamic Arrays:
+    Advantages:
+        Efficient random access to elements.
+        Better cache locality, leading to faster access times.
+        Efficient memory usage as elements are stored in contiguous memory blocks.
+    Disadvantages:
+        Costly resizing operations when the array reaches its capacity.
+        Inefficient for frequent insertions and deletions at arbitrary positions due to shifting elements.
+        Fixed capacity can lead to wasted memory or insufficient space.
+    Conclusion:
+    Linked Lists are preferable for scenarios where frequent insertions and deletions are required, especially at arbitrary positions, and when memory efficiency is critical.
+    Dynamic Arrays are suitable for scenarios where fast random access to elements and efficient memory usage are important, especially when the size of the data is known in advance or when dynamic resizing overhead is acceptable.
+    The choice between them depends on the specific requirements of the application, such as the nature of data manipulation, performance constraints, and memory considerations.
